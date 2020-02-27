@@ -131,3 +131,4 @@ dmypy.json
 # others
 .idea/
 tweets.csv
+tweet.js

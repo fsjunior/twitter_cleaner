@@ -12,7 +12,9 @@ class App(object):
 
         self.api = tweepy.API(auth)
 
+        print("Opening file...")
         self.ar = archivefilter.ArchiveFilter(args.file)
+
         self.args = args
 
     def run(self):
@@ -22,9 +24,9 @@ class App(object):
 
         list_of_ids = self.ar.filter(timestamp_filter)
 
-        print("Tweets that matches the date filter: {}".format(len(list_of_ids)))
+        print("Tweets that matches the filter: {}".format(len(list_of_ids)))
 
-        print("Deleting tweets...")
+        print("Cleaning tweets... This operation will take some time.")
 
         deleted_tweets_count = 0
         for tweet_id in tqdm(list_of_ids):
@@ -39,9 +41,7 @@ class App(object):
                     for _ in tqdm(range(60)):
                         time.sleep(1)
                 else:
-                    print(e)
-                    print("Unknown error. Exiting.")
-                    return 1
+                    print("Tweet with id {} unavailable (error {}), skipping.".format(tweet_id, str(e)))
         print("Finished! {} tweets deleted.".format(deleted_tweets_count))
 
         return 0
