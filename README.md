@@ -24,7 +24,12 @@ pip install -r requirements.txt
 6. Run: 
 
 ``` bash
-python main.py --consumer_key <consumer-key> --consumer_secret <consumer-secret> --access_token_key <access-token-key> --access_token_secret <access-token-secret> --older_than <date in YYYY-MM-DD format> --file <csv-file with your tweets downloaded>
+python main.py --consumer_key <consumer-key> \\
+       --consumer_secret <consumer-secret>   \\
+       --access_token_key <access-token-key> \\
+       --access_token_secret <access-token-secret> \\
+       --older_than <date in YYYY-MM-DD format> \\
+       --file <csv-file with your tweets downloaded>
 ```
 
-Depending on how many tweets it will be deleted, the process will take a long time. 
+Depending on how many tweets it will be deleted, this process can take a long time. 
