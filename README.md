@@ -1,6 +1,6 @@
 # Twitter Cleaner
 
-A small python script that allows you to delete your tweets beyond a specific date. 
+A small python script that allows you to delete your old tweets. 
 
 ## Installation
 
@@ -31,7 +31,7 @@ python main.py --consumer_key <consumer-key> \\
        --older_than <date in YYYY-MM-DD format> \\
        --file <path/to/tweet.js>
 ```
-Depending on how many tweets it will be deleted, this process can take a long time.
+
 
 ### Filters
 

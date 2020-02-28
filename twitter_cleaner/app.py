@@ -47,7 +47,7 @@ class App(object):
 
         print("{} matched tweets!".format(len(list_of_ids)))
 
-        print("The process will continue in 10 seconds. Hit CTRL+C if you want to stop.")
+        print("The process will continue in 10 seconds. Hit CTRL+C if you want to stop...")
         time.sleep(10)
         print("Cleaning tweets... This operation will take some time.")
 
@@ -56,6 +56,9 @@ class App(object):
             progress_bar = tqdm(total=len(list_of_ids))
             for tweet_id in list_of_ids:
                 executor.submit(self._delete_tweet, tweet_id, progress_bar)
+
+            executor.shutdown(wait=True)
+            progress_bar.close()
 
         print("Finished!")
         return 0

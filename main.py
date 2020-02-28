@@ -14,8 +14,8 @@ if __name__ == "__main__":
 
     parser.add_argument('--file', help='Twitter archive file (can be booth old CSV or new JS)', required=True)
 
-    parser.add_argument('--workers', help='Concurrent workers that will access the Twitter API (Default: 15)', type=int,
-                        default=15)
+    parser.add_argument('--workers', help='Concurrent workers that will access the Twitter API (Default: 50)', type=int,
+                        default=50)
 
     args = parser.parse_args()
 
