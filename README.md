@@ -4,13 +4,9 @@ A small python script that allows you to delete your old tweets.
 
 ## Installation
 
-Just clone this repo and install the requirements.txt packages. Python3 is required.
-
+Use pip:
 ```bash
-git clone https://github.com/fsjunior/twitter_cleaner.git
-python3 -m venv venv
-. venv/bin/activate
-pip install -r requirements.txt
+pip install twitter_cleaner
 ```
 
 ## How to use
@@ -24,7 +20,7 @@ pip install -r requirements.txt
 6. Run: 
 
 ``` bash
-python main.py --consumer_key <consumer-key> \\
+python -m twitter_cleaner --consumer_key <consumer-key> \\
        --consumer_secret <consumer-secret>   \\
        --access_token_key <access-token-key> \\
        --access_token_secret <access-token-secret> \\
