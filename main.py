@@ -10,7 +10,13 @@ if __name__ == "__main__":
     parser.add_argument('--access_token_secret', help='Access Token Secret', required=True)
 
     parser.add_argument('--older_than', help='Delete tweets older than (YYYY-MM-DD format)', required=True)
+    parser.add_argument('--newer_than', help='Delete tweets newer than (YYYY-MM-DD format)', required=False)
+
     parser.add_argument('--file', help='Twitter archive file (can be booth old CSV or new JS)', required=True)
+
+    parser.add_argument('--workers', help='Concurrent workers that will access the Twitter API (Default: 15)', type=int,
+                        default=15)
+
     args = parser.parse_args()
 
     app = App(args)

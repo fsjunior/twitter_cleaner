@@ -132,3 +132,4 @@ dmypy.json
 .idea/
 tweets.csv
 tweet.js
+output.log

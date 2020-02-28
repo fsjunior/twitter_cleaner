@@ -31,5 +31,10 @@ python main.py --consumer_key <consumer-key> \\
        --older_than <date in YYYY-MM-DD format> \\
        --file <path/to/tweet.js>
 ```
+Depending on how many tweets it will be deleted, this process can take a long time.
 
-Depending on how many tweets it will be deleted, this process can take a long time. 
+### Filters
+
+
+There are two filters available: filter tweets older than a date AND filter tweets newer than a date. If you need more filtering options, like filter tweets with less (or more) than a specific amount of engagement, please ask.
+ 
